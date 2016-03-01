@@ -1,0 +1,76 @@
+/*
+#main { 
+    position: relative;
+}
+*/
+
+
+/* THE STYLE FOR THE DROP-DOWN CONTAINER */
+.dropdownPanel {
+    width: 600px;
+    height: 400px;
+    margin-left: 825px;
+    background-color: dimgray;
+    position: absolute;
+    z-index: 1;
+    opacity: .90;
+    color: white;
+    display: none;
+}
+.table-hover th, .table-hover td{
+    border-top: none !important;
+    cursor: pointer;
+}
+.table-hover:hover{
+    color: gray;  
+}
+p.what {
+    display: inline-block;
+    margin-left: 800px;
+    margin-top: 30px;
+}
+.yearDisplay {
+    display: inline-block;
+    font-size: 50px;
+    margin-left: 20px;
+    font-weight: bold;
+}
+.dropArrow {
+    display: inline-block;
+    margin-left: 20px;
+    cursor: pointer;
+}
+.display {
+    display: inline-block;
+    margin-left: 15px;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

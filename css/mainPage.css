@@ -1,0 +1,226 @@
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed, 
+figure, figcaption, footer, header, hgroup, 
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+	margin: 0;
+	padding: 0;
+	border: 0;
+	font-size: 100%;
+	font: inherit;
+	vertical-align: baseline;
+}
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure, 
+footer, header, hgroup, menu, nav, section {
+	display: block;
+}
+body {
+	line-height: 1;
+    background-color: #5e5e5e;
+}
+ol, ul {
+	list-style: none;
+}
+blockquote, q {
+	quotes: none;
+}
+blockquote:before, blockquote:after,
+q:before, q:after {
+	content: '';
+	content: none;
+}
+table {
+	border-collapse: collapse;
+	border-spacing: 0;
+}
+
+
+/* 
+ * These selection declarations have to be separate
+ * No text-shadow: twitter.com/miketaylr/status/12228805301
+ * Also: hot pink!
+ */
+
+::-moz-selection { background: #fe57a1; color: #fff; text-shadow: none; }
+::selection { background: #fe57a1; color: #fff; text-shadow: none; }
+
+
+/* ========================================
+   Links
+   ======================================*/
+
+a:hover, a:active { outline: 0; }
+
+/*=========================================
+	 ♦♦♦♦♦♦♦♦ Main Styles ♦♦♦♦♦♦♦♦
+=========================================*/
+
+body {
+font-family: arial;
+font-size: 15px;
+line-height: 25px;
+color: #515151;
+}
+h3 {
+	font-size: 20px;
+	font-weight: bold;
+}
+.navbar {
+	background-color: #ffbe55;
+}
+section {
+	background-color: #5e5e5e;
+}
+#main {
+    margin-left: 180px;
+    margin-top: 40px;
+}
+
+/* ISOTOPE STYLES BELOW */
+.isotope-item {
+  z-index: 2;
+}
+ .isotope-hidden.isotope-item {
+  pointer-events: none;
+  z-index: 1;
+}
+ .isotope,
+.isotope .isotope-item {
+  /* change duration value to whatever you like */
+  -webkit-transition-duration: 0.8s;
+     -moz-transition-duration: 0.8s;
+          transition-duration: 0.8s;
+}
+.isotope {
+  -webkit-transition-property: height, width;
+     -moz-transition-property: height, width;
+          transition-property: height, width;
+}
+.isotope .isotope-item {
+  -webkit-transition-property: -webkit-transform, opacity;
+     -moz-transition-property:    -moz-transform, opacity;
+          transition-property:         transform, opacity;
+}
+/* ISOTOPE STYLES ABOVE */
+
+/*========================================
+  •••••••••• TILE STYLES BELOW •••••••••••
+==========================================*/
+.tileHeader {
+    padding-left: 30px;
+    padding-top: 30px;
+    font-weight: 400;
+    font-size: 12px;
+    display: inline-block;
+    color: #000;
+}
+.tileContent {
+    margin-left: 30px;
+    margin-top: 20px;
+    margin-bottom: 50px;
+    font-size: 40px;
+    max-width: 255px;
+    color: #fff;
+    line-height: 100%;
+    display: inline-block;
+}
+.tileSubContent {
+    margin-left: 30px;
+    margin-bottom: 35px;
+    margin-top: -30px;
+    font-size: 20px;
+    max-width: 210px;
+    display: inline-block;
+    color: #000;
+}
+img {
+    display: inline-block;
+    float: right;
+    margin-top: 20px;
+    margin-right: 20px;
+}
+.greenBox {
+    max-width:350px;
+    height: auto;
+    background: #86b840;
+}
+.orangeBox {
+    max-width: 350px;
+    height: auto;
+    background: #fbb24c;
+}
+.pinkBox {
+    max-width: 350px;
+    height: auto;
+    background: #e43e7b;
+}
+.blueBox {
+    max-width: 350px;
+    height: auto;
+    background: #26C2F2;
+}
+.name {
+    max-width: 350px;
+    height: 300px;
+    background: #e43e7b;
+}
+.name h1{
+    padding-left: 30px;
+    padding-top: 30px;
+    font-weight: 400;
+    font-size: 12px;
+    color: #000;
+    display: inline-block;
+    float: left;
+}
+.box {
+/* if not using border-box 
+width: 218px; 
+*/
+width: 350px;
+background: #ffffff;
+margin: 10px ;
+float: left;
+
+-webkit-box-shadow: 0px 0px 1px 1px #aaa;
+box-shadow: none;
+}
+/*=========================================
+   •••••••••• TILE STYLES ABOVE ••••••••••
+===========================================*/
+
+/*SOCIAL BOX BELOW*/
+.socialButtons {
+
+}
+.favorite {
+    float: left;
+    margin-bottom: 20px;
+    margin-left: 20px;
+}
+.share {
+	float: left;
+}
+.favorite:hover {
+    background: pink;
+}
+.share:hover {
+    background: lightblue;
+}
+.fa-heart-o:hover {
+    color: pink;
+    font-size: 21px;
+}
+.fa-circle:hover {
+    color: pink;
+}
+/*SOCIAL BOX ABOVE*/

@@ -1,0 +1,86 @@
+.timeContainer {
+    position: relative;
+    width: 700px;
+    height: 50px;
+    bor der: 1px solid white;
+    margin-left: 400px;
+    margin-top: 20px;
+}
+.box1 {
+    position: absolute;
+    width: 200px;
+    height: 50px;
+}
+.box2 {
+    position: absolute;
+    width: 200px;
+    height: 50px;
+    margin-left: 210px;
+}
+.box3 {
+    position: absolute;
+    width: 200px;
+    height: 50px;
+    margin-left: 420px;
+}
+.box4 {
+    position: absolute;
+    width: 200px;
+    height: 50px;
+    margin-left: 630px;
+}
+.box5 {
+    position: absolute;
+    width: 200px;
+    height: 50px;
+    margin-left: 840px;
+}
+.box6 {
+    position: absolute;
+    width: 200px;
+    height: 50px;
+    margin-left: 1050px;
+}
+#newSlider .ui-slider {
+    border-radius: 0px;
+    height: 30px;
+    background:rgba(255,255,255,0.3);
+    border: none;
+}
+#newSlider .ui-slider-handle {
+    top: 5.5px;
+    border-radius: 25px;
+    background: white;
+    border: none;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

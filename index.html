@@ -1,0 +1,494 @@
+<!doctype html>
+<html lang="en" data-ng-app="StoryApp">
+<head>
+	<meta charset="utf-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+
+	<title>DiscoverMyStory</title>
+	<meta name="description" content="">
+	<meta name="author" content="">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+	<link rel="stylesheet" href="css/bootstrap.min.css">
+    <link rel="stylesheet" href="bower_components/jQuery-ui-Slider-Pips/dist/jquery-ui-slider-pips.min.css">
+    <link rel="stylesheet" href="bower_components/jquery-ui/themes/black-tie/jquery-ui.min.css">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css">
+	
+    <link rel="stylesheet" href="css/timelineView.css">
+	<link rel="stylesheet" href="css/mainPage.css">
+    <link rel="stylesheet" href="css/tileModal.css">
+    <link rel="stylesheet" href="css/sliderContainer.css">
+
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.4.9/angular.min.js"></script>
+	<script src="bower_components/jquery/dist/jquery.min.js"></script>
+    <script src="bower_components/jquery-ui/jquery-ui.js"></script>
+    <script src="bower_components/jQuery-ui-Slider-Pips/dist/jquery-ui-slider-pips.min.js"></script>
+    <script src="js/bootstrap.min.js"></script>
+    <script src="js/isotope.pkgd.min.js"></script>
+
+
+    <script src="js/app.js"></script>
+    <script src="js/main.js"></script>
+    <script src="js/header.js"></script>
+	<script src="js/modal.js"></script>
+    <script src="js/slider.js"></script>
+
+
+</head>
+<body>
+
+<nav class="navbar navbar-default" role="navigation">
+    <div class="container group">
+
+			<a class="navbar-brand" id="logoImage" href="#"><img src="Images/corner_temp.png"></a>
+
+<!--
+			<ul class="nav navbar-nav navbar-left" id="controls">
+				<li><a href="#cat1">1900 - 1920</a></li>
+				<li><a href="#cat2">1921 - 1940</a></li>
+				<li><a href="#cat3">1941 - 1960</a></li>
+                <li><a href="#cat2">1961 - 1980</a></li>
+                <li><a href="#cat1">1981 - 2000</a></li>
+                <li><a href="#cat3">2001 - 2016</a></li>
+			</ul>
+-->
+    </div>
+
+    <p class="what"> WHAT HAPPENED IN </p>
+    <p class="yearDisplay">2006</p>
+    <p class="dropArrow"><i class="fa fa-chevron-circle-right fa-2x"></i></p>
+    <p class="display">YOUR PARENTS WERE MARRIED</p>
+
+    <div class="timeContainer">
+        <div id="newSlider" class="box1">
+            <div class="slider"></div>
+        </div>
+        <div id="newSlider" class="box2">
+            <div class="slider"></div>
+        </div>
+        <div id="newSlider" class="box3">
+            <div class="slider"></div>
+        </div>
+        <div id="newSlider" class="box4">
+            <div class="slider"></div>
+        </div>
+        <div id="newSlider" class="box5">
+            <div class="slider"></div>
+        </div>
+        <div id="newSlider" class="box6">
+            <div class="slider"></div>
+        </div>
+    </div>
+</nav>
+
+<!-- DROP DOWN BOX CONTAINER -->
+    <div class="dropdownPanel">
+        <table class="table table-hover">
+            <tbody>
+                <tr>
+                    <th scope="row">2016</th>
+                    <td> YOU TURN 18</td>
+                </tr>
+                <tr>
+                    <th scope="row">2014</th>
+                    <td> YOU TURNED 16</td>
+                </tr>
+                <tr>
+                    <th scope="row">2006</th>
+                    <td> YOU TURNED 8</td>
+                </tr>
+                <tr>
+                    <th scope="row">1998</th>
+                    <td> YOU WERE BORN</td>
+                </tr>
+                <tr>
+                    <th scope="row">1991</th>
+                    <td> YOUR PARENTS WERE MARRIED </td>
+                </tr>
+                <tr>
+                    <th scope="row">1984</th>
+                    <td> YOUR MOTHER WAS 18</td>
+                </tr>
+                <tr>
+                    <th scope="row">1967</th>
+                    <td> YOUR FATHER WAS BORN</td>
+                </tr>
+                <tr>
+                    <th scope="row">1956</th>
+                    <td> YOUR GRANDPARENTS DEE AND <br>ELAINE PULLMAN WERE MARRIED</td>
+                </tr>
+                <tr>
+                    <th scope="row">1937</th>
+                    <td> YOUR GRANDMOTHER ELAINE LEIFSON<br> WAS BORN</td>
+                </tr>
+            </tbody>
+
+        </table>
+
+    </div>
+
+
+    <section id="main" class="container">
+        
+        <!-- ||||||  MODAL BELOW  ||||||-->
+		<div class="modal fade" id="myModal" role="dialog">
+			<div class="modal-dialog modal-lg">
+
+				<!-- Modal content-->
+				<div class="modal-content">
+					<div class="modal-header">
+						<button type="button" class="close" data-dismiss="modal">&times;</button>
+
+						<h4 class="modal-title">
+							<p>See where others share your name. Odd future sriracha fixie disrupt, helvetica ugh ennui semiotics selfies. </p>
+						</h4>
+					</div>
+					<div class="modal-body">
+						<img src="Images/temp_80s02.jpg">
+
+					</div>
+					<!--<div class="modal-footer">-->
+						<!--<button type="button" class="btn btn-default" data-dismiss="modal">Close</button>-->
+					<!--</div>-->
+				</div>
+
+			</div>
+		</div>
+		<!-- ||||||  MODAL ABOVE  ||||||-->
+        
+    
+        <!--========== START OF BOX =============-->
+	
+    <div class="box cat1 cat2">
+        <div class="greenBox" ng-controller="MainController">
+            <img src="Images/icons_baseball.png">
+            <div class="tileHeader">
+                <h1>{{ mlb.tileName | uppercase }}</h1>
+            </div>
+            <div class="tileContent">
+                <div>{{ mlb.winner }}</div>
+            </div>
+            <div class="tileSubContent">
+                <div>{{ mlb.defeated }}</div>
+            </div>
+        </div>
+        <div class="socialButtons">
+            <ul>
+                <li class="favorite">
+                    <img src="Images/box_butt_share.png">
+                  </li>
+				<li class="share">
+                    <img src="Images/box_butt_like.png">
+                  </li>
+            </ul>	
+		</div>
+    </div>
+
+	<div class="box cat3">
+        <div class="orangeBox" ng-controller="MainController">
+            <img src="Images/icons_music.png">
+            <div class="tileHeader">
+                <h1>{{ song.tileName | uppercase }}</h1>
+            </div>
+            <div class="tileContent">
+                <p>{{ song.songTitle }}</p>
+            </div>
+            <div class="tileSubContent">
+                <p>{{ song.songArtist }}</p>
+            </div>
+        </div>
+		<div class="socialButtons">
+			<ul>
+                <li class="favorite">
+                    <img src="Images/box_butt_share.png">
+                </li>
+				<li class="share">
+                    <img src="Images/box_butt_like.png">
+                </li>
+            </ul>
+		</div>
+	</div>
+
+	<div class="box cat1">
+        <div class="pinkBox" ng-controller="MainController">
+            <img src="Images/icons_movies.png">
+            <div class="tileHeader">
+                <h1>{{bestfilm.tileName | uppercase }}</h1>
+            </div>
+            <div class="tileContent">
+                <p>{{ bestfilm.filmTitle }}</p>    
+            </div>
+        </div>
+		<div class="socialButtons">
+			<ul>
+                <li class="favorite">
+                    <img src="Images/box_butt_share.png">
+                </li>
+				<li class="share">
+                    <img src="Images/box_butt_like.png">
+                </li>
+            </ul>
+		</div>
+    </div>
+
+	<div class="box cat2">
+        <div class="name" ng-controller="MainController">
+            <p ng-style="meaning">What is the meaning of</p>
+        </div>
+		<div class="socialButtons">
+			<ul>
+                <li class="favorite">
+                    <img src="Images/box_butt_share.png">
+                </li>
+				<li class="share">
+                    <img src="Images/box_butt_like.png">
+                </li>
+            </ul>
+		</div>
+	</div>
+
+	<div class="box cat2 cat3">
+        <div class="pinkBox" ng-controller="MainController">
+            <img src="Images/icons_baseball.png">
+            <div class="tileHeader">
+                <h1>{{ collegebaseball.tileName | uppercase}}</h1>   
+            </div>
+            <div class="tileContent">
+                <p> {{ collegebaseball.cbwinner }}</p>
+            </div>
+            <div class="tileSubContent">
+                <p> {{ collegebaseball.cbloser }}</p>
+            </div>
+        </div>
+		<div class="socialButtons">
+			<ul>
+                <li class="favorite">
+                    <img src="Images/box_butt_share.png">
+                </li>
+				<li class="share">
+                    <img src="Images/box_butt_like.png">
+                </li>
+            </ul>
+		</div>
+    </div>
+
+	<div class="box cat2">
+        <img src="Images/gas.PNG">
+		<div class="socialButtons">
+			<ul>
+                <li class="favorite">
+                    <img src="Images/box_butt_share.png">
+                </li>
+				<li class="share">
+                    <img src="Images/box_butt_like.png">
+                </li>
+            </ul>
+		</div>
+<!--
+		<h3>Price of Gas</h3>
+		<p>Explore the price of gas over the years.</p>
+-->
+	</div>
+
+	<div class="box cat1 cat3">
+        <div class="blueBox" ng-controller="MainController">
+            <img src="Images/icons_tech.png">
+            <div class="tileHeader">
+                <h1> {{ sciandtech.tileName | uppercase }}</h1>
+            </div>
+            <div class="tileContent">
+                <p> {{ sciandtech.scienceNews }}</p>
+            </div>
+        </div>
+		<div class="socialButtons">
+			<ul>
+                <li class="favorite">
+                    <img src="Images/box_butt_share.png">
+                </li>
+				<li class="share">
+                    <img src="Images/box_butt_like.png">
+                </li>
+            </ul>
+		</div>
+    </div>
+
+	<div class="box cat3">
+        <div class="greenBox" ng-controller="MainController">
+            <img src="Images/icons_tour.png">
+            <div class="tileHeader">
+                <h1>{{ tourdefrance.tileName | uppercase }}</h1>
+            </div>
+            <div class="tileContent">
+                <p> {{ tourdefrance.bycyclist }} </p>
+            </div>
+        </div>
+		<div class="socialButtons">
+			<ul>
+                <li class="favorite">
+                    <img src="Images/box_butt_share.png"></li>
+				<li class="share">
+                    <img src="Images/box_butt_like.png">
+                </li>
+            </ul>
+		</div>
+    </div>
+
+	<div class="box cat1 cat3">
+        <div class="orangeBox" ng-controller="MainController">
+            <img src="Images/icons_news.png">
+            <div class="tileHeader">
+                <h1>{{ usnews.tileName | uppercase }}</h1>
+            </div>
+            <div class="tileContent">
+                <p>{{ usnews.topusnews }}</p>
+            </div>
+        </div>
+		<div class="socialButtons">
+			<ul>
+                <li class="favorite">
+                    <img src="Images/box_butt_share.png">
+                </li>
+				<li class="share">
+                    <img src="Images/box_butt_like.png">
+                </li>
+            </ul>
+		</div>
+	</div>
+
+	<div class="box cat2">
+        <div class="orangeBox" ng-controller="MainController">
+            <img src="Images/icons_football.png">
+            <div class="tileHeader">
+                <h1>{{ superbowl.tileName | uppercase }}</h1>
+            </div>
+            <div class="tileContent">
+                <p> {{ superbowl.bowlchamps }} </p>
+            </div>
+            <div class="tileSubContent">
+                <p> {{ superbowl.bowllosers }}</p>
+            </div>
+        </div>
+		<div class="socialButtons">
+			<ul>
+                <li class="favorite">
+                    <img src="Images/box_butt_share.png">
+                </li>
+				<li class="share">
+                    <img src="Images/box_butt_like.png">
+                </li>
+            </ul>
+		</div>
+	</div>
+
+	<div class="box cat3">
+        <div class="pinkBox" ng-controller="MainController">
+            <img src="Images/icons_basketball.png">
+            <div class="tileHeader">
+                <h1>{{ nbachamps.tileName | uppercase }}</h1>
+            </div>
+            <div class="tileContent">
+                <p> {{ nbachamps.nbachamps }}</p>
+            </div>
+            <div class="tileSubContent">
+                <p> {{ nbachamps.nbalosers }} </p>
+            </div>
+        </div>
+		<div class="socialButtons">
+			<ul>
+                <li class="favorite">
+                    <img src="Images/box_butt_share.png">
+                </li>
+				<li class="share">
+                    <img src="Images/box_butt_like.png">
+                </li>
+            </ul>
+		</div>
+	</div>
+
+	<div class="box cat1">
+        <img src="Images/church.PNG">
+		<div class="socialButtons">
+			<ul>
+                <li class="favorite"><img src="Images/box_butt_share.png"></li>
+				<li class="share"><img src="Images/box_butt_like.png"></li>
+            </ul>
+		</div>
+	</div>
+        
+    <div class="box cat1">
+        <div class="pinkBox" ng-controller="MainController">
+            <img src="Images/icons_tech.png">
+            <div class="tileHeader">
+                <h1>{{ sciandtech.tileName | uppercase }}</h1>    
+            </div>
+            <div class="tileContent">
+                <p> {{ sciandtech.scienceNews }}</p>    
+            </div>
+        </div>
+        <div class="socialButtons">
+            <ul>
+                <li class="favorite">
+                    <img src="Images/box_butt_share.png">
+                </li>
+                <li class="share">
+                    <img src="Images/box_butt_like.png">
+                </li>
+            </ul>
+        </div>
+    </div>
+
+    <div class="box cat3">
+        <div class="blueBox" ng-controller="helloCtrl">
+            <h1>{{ myHello }}</h1>
+            <p>This box is for testing.</p>
+        </div>
+	</div>
+
+	<div class="box cat2 cat3">
+	
+	</div>
+
+	<div class="box cat1">
+        <div class="greenBox">
+	Mcsweeney's freegan readymade, fingerstache pitchfork organic food truck mixtape odd future single-origin coffee PBR. Four loko selfies PBR church-key, twee vice locavore art party. Brunch blog beard direct trade, fixie readymade cosby sweater. Marfa wayfarers fixie, squid selfies hashtag trust fund cliche.
+        </div>
+	</div>
+
+	<div class="box cat2 cat1">
+	Odd future 3 wolf moon twee, cliche marfa post-ironic pop-up master cleanse next level pickled gentrify. Direct trade small batch YOLO, pitchfork lomo PBR high life intelligentsia readymade letterpress flexitarian tousled. Direct trade pitchfork hoodie twee, yr pour-over Austin marfa 90's flexitarian food truck mlkshk helvetica +1 trust fund.
+	</div>
+
+	<div class="box cat2">
+	Bushwick marfa craft beer, wes anderson you probably haven't heard of them locavore tousled carles pork belly synth DIY blog cray. Farm-to-table craft beer typewriter, polaroid keytar intelligentsia cliche mcsweeney's ethnic mustache cred DIY. Typewriter semiotics raw denim, organic vinyl sustainable meggings beard carles banh mi you probably haven't heard of them. Vinyl salvia brooklyn, four loko biodiesel meh scenester lomo.
+	</div>
+
+	<div class="box cat1">
+	Try-hard thundercats food truck, shoreditch mlkshk polaroid truffaut ugh small batch cred vice mixtape williamsburg stumptown street art. Cliche intelligentsia cred high life, trust fund meggings leggings. Blog swag banksy freegan, ethical selfies ennui cray helvetica cliche literally umami vinyl. Banh mi post-ironic mixtape, food truck PBR pickled vinyl umami.
+	</div>
+
+	<div class="box cat3">
+	Dreamcatcher actually pug, bushwick occupy semiotics banjo. Sartorial pop-up PBR, etsy truffaut post-ironic marfa carles banksy helvetica. Leggings mixtape chambray gluten-free pickled cred american apparel, shoreditch church-key synth gastropub pinterest semiotics twee messenger bag.
+	</div>
+
+	<div class="box cat1 cat3">
+	Odd future sriracha fixie disrupt, helvetica ugh ennui semiotics selfies. Pitchfork blog food truck art party ethical, skateboard flannel hella. Wes anderson thundercats squid four loko art party chillwave +1, leggings scenester fashion axe trust fund photo booth meggings direct trade 90's. Squid sriracha 3 wolf moon, Austin wayfarers biodiesel put a bird on it food truck try-hard street art pop-up mustache retro.
+	</div>
+
+	<div class="box cat3">
+	Mustache flannel whatever blue bottle stumptown terry richardson swag scenester, retro ugh pop-up tonx ennui kogi chillwave. Craft beer skateboard tattooed cray, high life scenester marfa salvia american apparel twee pitchfork master cleanse leggings banksy four loko. You probably haven't heard of them skateboard banksy beard.
+	</div>
+
+	<div class="box cat1 cat3">
+	Butcher etsy vinyl skateboard photo booth, wolf gastropub twee. Pork belly williamsburg disrupt, art party deep v mcsweeney's flannel vinyl master cleanse cliche. PBR intelligentsia vice small batch.
+	</div>
+
+	<div class="box cat3">
+	Mcsweeney's freegan readymade, fingerstache pitchfork organic food truck mixtape odd future single-origin coffee PBR. Four loko selfies PBR church-key, twee vice locavore art party. Brunch blog beard direct trade, fixie readymade cosby sweater. Marfa wayfarers fixie, squid selfies hashtag trust fund cliche.
+	</div>
+
+</section>
+<script src="js/services/tileData.js"></script>
+<script src="js/controllers/tileController.js"></script>
+
+</body>
+</html>
